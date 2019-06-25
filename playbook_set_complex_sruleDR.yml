@@ -46,7 +46,7 @@
         hip_profiles: ['any']
         action: 'allow'
         #operation: 'add'
-        state: 'absent'
+        state: 'present'
         commit: false
 
     # Allow HTTP multimedia only from CDNs
@@ -84,7 +84,7 @@
         url_filtering: 'default'
         wildfire_analysis: 'default'
         commit: false
-        state: 'absent'
+        state: 'present'
 
     # deny all
     - name: Deny all rules used as a 'catch-all' at the end
@@ -96,5 +96,5 @@
         log_end: true
         action: 'deny'
         rule_type: 'interzone'
-        state: 'absent'
+        state: 'present'
 
